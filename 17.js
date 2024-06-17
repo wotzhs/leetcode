@@ -24,7 +24,6 @@ var letterCombinations = function (digits) {
 
 	while (q.length > 0) {
 		const [sofar, remaining] = q.shift();
-		// console.log(`sofar ${sofar}, remaining: ${remaining}`);
 
 		if (!remaining) {
 			ans.push(sofar.join(""));
@@ -32,15 +31,10 @@ var letterCombinations = function (digits) {
 		}
 
 		const currDigit = remaining[0];
-		// console.log("currDigit", currDigit);
-		// console.log("letters", letters[currDigit]);
 		for (var i = 0; i < letters[currDigit].length; i++) {
 			q.push([[...sofar, letters[currDigit][i]], remaining.slice(1)]);
 		}
-		// console.log("Q", q);
 	}
 
 	return ans;
 };
-
-console.log(letterCombinations("999"));

@@ -34,7 +34,3 @@ var maxVowels = function (s, k) {
 
 	return max;
 };
-
-console.log(maxVowels("abciiidef", 3));
-console.log(maxVowels("aeiou", 2));
-console.log(maxVowels("leetcode", 3));

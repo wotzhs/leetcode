@@ -57,16 +57,5 @@ var maximalSquare = function (matrix) {
 		}
 	}
 
-	console.log(dp);
 	return max;
 };
-
-console.log(
-	maximalSquare([
-		["1", "1", "1", "1", "0"],
-		["1", "1", "1", "1", "0"],
-		["1", "1", "1", "1", "1"],
-		["1", "1", "1", "1", "1"],
-		["0", "0", "1", "1", "1"],
-	])
-);
