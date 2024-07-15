@@ -43,8 +43,13 @@ public:
             while(tempQ.size()) {
                 Node* entry = tempQ.front();
                 tempQ.pop();
-                q.emplace(entry->left);
-                q.emplace(entry->right);
+                if (entry->left != nullptr) {
+                    q.emplace(entry->left);
+                }
+
+                if (entry->right != nullptr) {
+                    q.emplace(entry->right);
+                }
             }
         }
 
